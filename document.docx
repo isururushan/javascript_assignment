@@ -1,0 +1,28 @@
+Title: (Your website title — change it)
+Brief description:
+This website allows users to enter a student name and five subject marks, calculate total and average, 
+determine a grade and pass/fail status, and save multiple results into a history list that can be updated dynamically.
+
+Target users:
+Students and lecturers who want a quick way to calculate results and keep a small record during practice.
+
+JavaScript features used:
+
+Variables to store values (name, total, average, etc.)
+
+Arrays for subjects, marks, and saved history
+
+Arithmetic operators (+, /) for total and average
+
+Comparison operators (>=, <) for grading and validation
+
+innerHTML to update the webpage dynamically
+
+Button click events (Calculate, Save, Remove, Reset)
+
+Array indexing to read/display marks
+
+push() and pop() to manage saved history
+
+Technologies used:
+HTML, JavaScript, (Basic CSS)
