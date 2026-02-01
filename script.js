@@ -1,5 +1,5 @@
 // Initialize subject array
-const subjects = ["Mathematics", "Web Development", "DBatabase", "Networking", "OOP"];
+const subjects = ["Mathematics", "Web Development", "Database", "Networking", "OOP"];
 // Variable store last calculation
 let lastComputed = null;
 // Array to store saved results     
@@ -21,7 +21,6 @@ function readMarks() {
     if (value === "" || Number.isNaN(num) || num < 0 || num > 100) {
       return { ok: false, error: `Please enter a valid  student mark 0–100 for Subject ${i + 1}.` };
     }
-    // push() method used here
     marks.push(num); 
   }
   return { ok: true, marks };
@@ -84,14 +83,14 @@ function calculate() {
   };
 
   renderCurrentResult();
-  setMessage("Calculated successfully. You can now save to history.");
+  setMessage("Calculated successfully.");
   return lastComputed;
 }
 
 function renderCurrentResult() {
   const box = document.getElementById("resultBox");
   if (!lastComputed) {
-    box.innerHTML = "No result yet.";
+    box.innerHTML = "No result";
     return;
   }
 
@@ -118,25 +117,25 @@ function renderCurrentResult() {
 // Set data save 
 function saveToHistory() {
   if (!lastComputed) {
-    setMessage("Please calculate first, then save.");
+    setMessage("Please calculate first and then save.");
     return;
   }
 
   history.push(lastComputed); // push() required
   renderHistory();
-  setMessage("Saved to history!");
+  setMessage("Saved history");
 }
 
 // Set data removed 
 function removeLast() {
   if (history.length === 0) {
-    setMessage("History is empty. Nothing to remove.");
+    setMessage("History is empty.");
     return;
   }
 
   history.pop();
   renderHistory();
-  setMessage("Removed last saved item.");
+  setMessage("Removed last saved student data.");
 }
 
 // Get history of data
@@ -144,7 +143,7 @@ function renderHistory() {
   const box = document.getElementById("historyBox");
 
   if (history.length === 0) {
-    box.innerHTML = "No saved results yet.";
+    box.innerHTML = "No saved results in here.";
     return;
   }
 
@@ -170,7 +169,7 @@ function resetForm() {
   for (let i = 0; i < 5; i++) document.getElementById(`m${i}`).value = "";
   lastComputed = null;
   renderCurrentResult();
-  setMessage("Form reset.");
+  setMessage("Reset.");
 }
 
 // Set to Button / event
