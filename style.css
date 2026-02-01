@@ -1,0 +1,101 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+h1,
+h2 {
+  color: #222;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 56px;
+  margin: 22px 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1.5px solid #d0d5dd;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+  background: #fafafa;
+}
+
+input:focus {
+  border-color: #4f46e5;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+button {
+  padding: 12px 18px;
+  margin-top: 16px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#btnCalc {
+  background: #4f46e5;
+  color: #fff;
+}
+
+#btnSave {
+  background: #16a34a;
+  color: #fff;
+}
+
+#btnRemove {
+  background: #dc2626;
+  color: #fff;
+}
+
+#btnReset {
+  background: #6b7280;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.muted {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+#resultBox,
+#historyBox {
+  background: #f9fafb;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px dashed #d1d5db;
+  margin-top: 8px;
+}

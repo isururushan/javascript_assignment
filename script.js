@@ -1,5 +1,5 @@
 // Initialize subject array
-const subjects = ["Math", "Web", "DB", "Networking", "OOP"];
+const subjects = ["Mathematics", "Web Development", "DBatabase", "Networking", "OOP"];
 // Variable store last calculation
 let lastComputed = null;
 // Array to store saved results     
@@ -27,8 +27,8 @@ function readMarks() {
   return { ok: true, marks };
 }
 
+// Grade logic defined
 function computeGrade(avg) {
-  // Grade logic defined
   if (avg >= 75) return "A";
   if (avg >= 65) return "B";
   if (avg >= 55) return "C";
@@ -36,10 +36,11 @@ function computeGrade(avg) {
   return "F";
 }
 
+//Define calculation logic
 function calculate() {
   const name = document.getElementById("studentName").value.trim();
   if (name.length < 2) {
-    setMessage("Please enter the student name (at least 2 characters).");
+    setMessage("Please enter the student name.");
     return null;
   }
 

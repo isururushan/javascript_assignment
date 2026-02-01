@@ -1,75 +1,65 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Student Marks Calculator</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: 24px auto; padding: 0 16px; }
-    .card { border: 1px solid #ddd; border-radius: 10px; padding: 16px; margin: 14px 0; }
-    label { display:block; margin-top: 10px; font-weight: 600; }
-    input { width: 100%; padding: 10px; margin-top: 6px; }
-    button { padding: 10px 14px; margin-top: 12px; margin-right: 8px; cursor:pointer; }
-    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .muted { color: #555; font-size: 0.95rem; }
-    ul { margin: 8px 0 0 18px; }
-    .good { font-weight: 700; }
-  </style>
-</head>
-<body>
-  <h1>Student Marks Calculator</h1>
-  <p class="muted">
-    Enter marks, calculate total/average/grade, and store results in a history list.
-    <!-- TODO: Change this description to your own topic wording -->
-  </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Marks Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Student Marks Calculator</h1>
+    <p class="muted">
+      Enter marks, Calculate the total, average, grade, and store results in a
+      history list.
+    </p>
 
-  <div class="card">
-    <h2>Enter Details</h2>
+    <div class="card">
+      <h2>Enter Details</h2>
 
-    <label for="studentName">Student Name</label>
-    <input id="studentName" type="text" placeholder="e.g., Tharindu" />
+      <label for="studentName">Student Name</label>
+      <input id="studentName" type="text" placeholder="Isuru" />
 
-    <div class="row">
-      <div>
-        <label for="m0">Subject 1 Mark (0–100)</label>
-        <input id="m0" type="number" min="0" max="100" placeholder="e.g., 75" />
+      <div class="row">
+        <div>
+          <label for="m0">Mathematics Marks</label>
+          <input id="m0" type="number" min="0" max="100" placeholder="ex: 75" />
+        </div>
+        <div>
+          <label for="m1">Web Development Marks</label>
+          <input id="m1" type="number" min="0" max="100" placeholder="ex: 62" />
+        </div>
+        <div>
+          <label for="m2">Database Marks</label>
+          <input id="m2" type="number" min="0" max="100" placeholder="ex: 88" />
+        </div>
+        <div>
+          <label for="m3">Networking Marks</label>
+          <input id="m3" type="number" min="0" max="100" placeholder="ex: 51" />
+        </div>
+        <div>
+          <label for="m4">OOP Marks</label>
+          <input id="m4" type="number" min="0" max="100" placeholder="ex: 93" />
+        </div>
       </div>
-      <div>
-        <label for="m1">Subject 2 Mark (0–100)</label>
-        <input id="m1" type="number" min="0" max="100" placeholder="e.g., 62" />
-      </div>
-      <div>
-        <label for="m2">Subject 3 Mark (0–100)</label>
-        <input id="m2" type="number" min="0" max="100" placeholder="e.g., 88" />
-      </div>
-      <div>
-        <label for="m3">Subject 4 Mark (0–100)</label>
-        <input id="m3" type="number" min="0" max="100" placeholder="e.g., 51" />
-      </div>
-      <div>
-        <label for="m4">Subject 5 Mark (0–100)</label>
-        <input id="m4" type="number" min="0" max="100" placeholder="e.g., 93" />
-      </div>
+
+      <button id="btnCalc">Calculate</button>
+      <button id="btnSave">Save to History</button>
+      <button id="btnRemove">Remove Last Saved</button>
+      <button id="btnReset">Reset Form</button>
+
+      <div id="message" class="muted" style="margin-top: 10px"></div>
     </div>
 
-    <button id="btnCalc">Calculate</button>
-    <button id="btnSave">Save to History</button>
-    <button id="btnRemove">Remove Last Saved</button>
-    <button id="btnReset">Reset Form</button>
+    <div class="card">
+      <h2>Current Result</h2>
+      <div id="resultBox" class="muted">No result yet.</div>
+    </div>
 
-    <div id="message" class="muted" style="margin-top:10px;"></div>
-  </div>
+    <div class="card">
+      <h2>Saved History</h2>
+      <div id="historyBox" class="muted">No saved results yet.</div>
+    </div>
 
-  <div class="card">
-    <h2>Current Result</h2>
-    <div id="resultBox" class="muted">No result yet.</div>
-  </div>
-
-  <div class="card">
-    <h2>Saved History</h2>
-    <div id="historyBox" class="muted">No saved results yet.</div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
